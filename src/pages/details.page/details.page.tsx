@@ -1,5 +1,6 @@
 import React, {FC, useEffect} from 'react';
 import {useLocation} from "react-router-dom";
+
 import {useAppDispatch, useAppSelector} from "../../hooks/redux.hooks";
 import {getDetailsPictureThunk} from "../../store/slices/picture.slice";
 import DetailsPicture from "../../components/DetailsPicture/DetailsPicture";

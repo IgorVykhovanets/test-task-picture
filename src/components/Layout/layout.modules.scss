@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid crimson;
+  position: fixed;
+
+  > a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 18px;
+    transition: 1s;
+    animation: footer-nav-link 3s 1;
+  }
+  @keyframes footer-nav-link {
+    0%{
+      margin-bottom: 500px;
+    }
+    75%{
+      letter-spacing: 6px;
+    }
+  }
+  a:hover {
+    color: crimson;
+    font-size: 22px;
+    transition: 1s;
+  }
+  a.active {
+    color: crimson;
+    font-size: 22px;
+    transition: 1s;
+  }
+}

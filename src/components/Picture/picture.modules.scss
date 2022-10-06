@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+
+
+.picture-block {
+  width: 425px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  background: rgba(0, 0, 0, 0.9);
+
+  > .img-block {
+    > img {
+      width: 250px;
+      height: 200px;
+      border-right: 1px solid rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  > .description-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    > h1 {
+      color: white;
+      text-align: center;
+      font-size: 24px;
+      font-family: 'Dosis', sans-serif;
+      align-items: center;
+      letter-spacing: 2px;
+      animation: picture-text 3s 1;
+    }
+
+    @keyframes picture-text {
+      0% {
+        font-size: 0;
+      }
+    }
+
+    > div {
+      > button {
+        width: 50px;
+        text-align: center;
+        font-size: 13px;
+        font-family: 'Dosis', sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 1s;
+      }
+
+      .btn-left {
+        border: 1px solid black;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        border-right: none;
+
+        > a {
+          text-decoration: none;
+          color: black;
+        }
+
+        a:hover {
+          color: crimson;
+        }
+      }
+
+      .btn-right {
+        border: 1px solid black;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      button:hover {
+        transition: 1s;
+        background: black;
+        color: crimson;
+      }
+    }
+  }
+}

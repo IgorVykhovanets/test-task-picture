@@ -1,10 +1,12 @@
 import React, {FC} from 'react';
 import {Route, Routes} from "react-router-dom";
 
+import './app.modules.scss';
 import HomePage from "./pages/home.page/home.page";
 import PicturesPage from "./pages/pictures.page/pictures.page";
 import DetailsPage from "./pages/details.page/details.page";
 import LikePicturesPage from "./pages/like.pictures.page/like.pictures.page";
+
 
 const App: FC = () => {
     return (

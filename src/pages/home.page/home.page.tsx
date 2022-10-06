@@ -3,7 +3,7 @@ import {Outlet} from "react-router-dom";
 
 import Layout from "../../components/Layout/Layout";
 
-const HomePage:FC = () => {
+const HomePage: FC = () => {
     return (
         <div>
             <Layout/>
