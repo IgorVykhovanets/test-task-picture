@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+
+
+.limit-menu {
+  margin-top: -16px;
+  position: relative;
+  top: 100px;
+  > ul {
+    display: flex;
+    justify-content: center;
+    margin-right: 35px;
+    gap: 100px;
+    > li{
+      > a {
+        text-decoration: none;
+        font-size: 16px;
+        color: black;
+        font-family: 'Dosis', sans-serif;
+        font-weight: bold;
+        transition: 1s;
+      }
+      a:hover{
+        font-size: 18px;
+        color: crimson;
+        transition: 1s;
+      }
+      a.active{
+        font-size: 18px;
+        color: crimson;
+        transition: 1s;
+      }
+    }
+  }
+}

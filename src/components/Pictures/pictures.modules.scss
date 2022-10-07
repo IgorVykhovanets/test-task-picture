@@ -1,31 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
 
 
-.nav-btn-menu{
+.nav-btn-menu {
   display: flex;
   justify-content: center;
   gap: 100px;
-  select{
+
+  > ul {
     margin-top: 100px;
-    width: 50px;
-    text-align: center;
-    padding-left: 3px;
-    font-size: 14px;
-    letter-spacing: 2px;
-    cursor: pointer;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-family: 'Dosis', sans-serif;
-    font-weight: bold;
-    transition: 1s;
+    margin-right: 30px;
+    gap: 50px;
+    display: flex;
+    > li {
+      > a {
+        text-decoration: none;
+        font-size: 16px;
+        color: black;
+        font-family: 'Dosis', sans-serif;
+        font-weight: bold;
+        transition: 1s;
+      }
+      a:hover{
+        font-size: 18px;
+        color: crimson;
+        transition: 1s;
+      }
+      a.active{
+        font-size: 18px;
+        color: crimson;
+      }
+    }
   }
-  select:hover{
-    width: 60px;
-    letter-spacing: 4px;
-    font-size: 15px;
-    color: crimson;
-    transition: 1s;
-  }
+
+
   button {
     border: 1px solid black;
     width: 100px;
@@ -39,6 +46,7 @@
     cursor: pointer;
     transition: 1s;
   }
+
   button:hover {
     background: black;
     color: white;
@@ -46,7 +54,8 @@
     width: 110px;
     font-size: 15px;
   }
-  button:active{
+
+  button:active {
     color: crimson;
   }
 }

@@ -25,7 +25,7 @@ const Picture: FC<{ picture: IPicture; }> = ({picture}) => {
                 <h1>{author}</h1>
                 <div>
                     <button className={'btn-left'}>
-                        <Link to={`${id}/info`} state={id}>details</Link>
+                        <Link to={`/pictures/${id}/info`} state={id}>details</Link>
                     </button>
                     <button onClick={likePicture} className={'btn-right'}>Like</button>
                 </div>

@@ -5,9 +5,9 @@ import {useAppDispatch, useAppSelector} from "../../hooks/redux.hooks";
 import {getAllPictureThunk} from "../../store/slices/picture.slice";
 import Picture from "../Picture/Picture";
 
-const Pictures: FC = () => {
+const Pictures: FC<{ limit: number; }> = ({limit}) => {
 
-    const [limit, setLimit] = useState<any>(20);
+
     const [page, setPage] = useState<number>(1);
 
 
@@ -50,18 +50,14 @@ const Pictures: FC = () => {
         }
     }
 
-    const limiter = (value: any) => {
-        setLimit(value)
-    }
-
     const dispatch = useAppDispatch();
 
     useEffect(() => {
         dispatch(getAllPictureThunk({
             page,
-            limit
+            limit,
         }))
-    }, [{page, limit}]);
+    }, [page, limit]);
 
     const {pictures} = useAppSelector(state => state.picturesReducer);
 
@@ -70,11 +66,6 @@ const Pictures: FC = () => {
         <div>
             <div className={'nav-btn-menu'}>
                 <button onClick={prevPage}>prev</button>
-                <select onChange={(e) => limiter(e.target.value)}>
-                    <option>20</option>
-                    <option>50</option>
-                    <option>100</option>
-                </select>
                 <button onClick={nextPage}>next</button>
             </div>
             <div className={'pictures-main-block'}>
