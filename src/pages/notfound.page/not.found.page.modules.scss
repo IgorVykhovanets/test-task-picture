@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+
+
+.not-found-block{
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+  align-items: center;
+  > h2{
+    margin: 0;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: crimson;
+    font-family: 'Dosis', sans-serif;
+    animation: not-found-block 3s 1;
+  }
+  @keyframes not-found-block {
+    0%{
+      font-size: 0;
+    }
+    50%{
+      letter-spacing: 10px;
+    }
+  }
+}

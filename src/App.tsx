@@ -7,6 +7,7 @@ import PicturesLimitPage from "./pages/pictures.limit.page/pictures.limit.page";
 import DetailsPage from "./pages/details.page/details.page";
 import LikePicturesPage from "./pages/like.pictures.page/like.pictures.page";
 import PicturesPage from "./pages/pictures.page/pictures.page";
+import NotFoundPage from "./pages/notfound.page/not.found.page";
 
 const App: FC = () => {
     return (
@@ -21,6 +22,7 @@ const App: FC = () => {
                     <Route path={'/pictures/:id/info'} element={<DetailsPage/>}/>
                     <Route path={'/pictures/like'} element={<LikePicturesPage/>}/>
                     <Route path={'/pictures/like/:id/info'} element={<DetailsPage/>}/>
+                    <Route path={'*'} element={<NotFoundPage/>}/>
                 </Route>
             </Routes>
         </div>
